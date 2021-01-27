@@ -8,6 +8,6 @@ class C_Login extends Controller
 {
     public function login_page()
     {
-        echo "Diana";
+        return view('login.loginpage');
     }
 }
