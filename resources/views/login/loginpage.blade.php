@@ -20,13 +20,13 @@
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
-                        <div class="login-brand" style="background-color:#ecf0f1;">
+                        <div class="login-brand" style="background-color:#ecf0f1;border-radius:32px;">
                             <img src="https://s3-id-jkt-1.kilatstorage.id/ebunga/ebunga-cdn/img-utility/ebunga-logo-small.png" alt="logo">
                         </div>
 
                         <div id="divLogin" class="card card-primary" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 10px; ">
                             <div class="card-header">
-                                <h4 style="text-align: center;">Login </h4>
+                                <h4>Ebunga Administrator</h4>
                             </div>
 
                             <div class="card-body">
@@ -37,11 +37,11 @@
                                 </div>
                                 <div class="form-group">
                                   <label>Password</label>
-                                  <input type="password" class="form-control" id="txtPassword" placeholder="Password">
+                                  <input type="password" id="txtPassword" class="form-control" placeholder="Password">
                                 </div>
 
                                 <div class="form-group">
-                                    <a href="#!" class="btn btn-primary btn-lg btn-block">Login</a>
+                                    <a href="#!" class="btn btn-primary btn-lg btn-block" @click="loginAtc">Login</a>
                                 </div>
 
                             </div>
@@ -68,10 +68,14 @@
     <script src="{{ asset('ladun/login/js/stisla.js') }}"></script>
 
     <!-- JS Libraies -->
-
+    <script src="https://s3-id-jkt-1.kilatstorage.id/ebunga/ebunga-cdn/js-lib/axios/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <!-- Template JS File -->
     <script src="{{ asset('ladun/login/js/scripts.js') }}"></script>
     <script src="{{ asset('ladun/login/js/custom.js') }}"></script>
+    <script>
+      const server = "{{ url('/') }}/";
+    </script>
     <script src="{{ asset('ladun/login/js/login.js') }}"></script>
 
 </body>

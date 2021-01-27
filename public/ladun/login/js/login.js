@@ -1,3 +1,5 @@
+// route
+var rToLogin = server + "auth/login/proses";
 // vue object
 var divLogin = new Vue({
     el : '#divLogin',
@@ -5,7 +7,16 @@ var divLogin = new Vue({
 
     },
     methods : {
-
+      loginAtc : function()
+      {
+        let username = document.querySelector('#txtUsername').value;
+        let password = document.querySelector('#txtPassword').value;
+        let ds = {'username':username, 'password':password}
+        axios.post(rToLogin, ds).then(function(res){
+          let dr = res.data;
+          console.log(dr);
+        });
+      }
     }
 });
 
