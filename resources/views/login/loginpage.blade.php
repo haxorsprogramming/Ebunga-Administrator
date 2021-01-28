@@ -41,7 +41,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <a href="#!" class="btn btn-primary btn-lg btn-block" @click="loginAtc">Login</a>
+                                    <a href="#!" id="btnLogin" class="btn btn-primary btn-lg btn-block" @click="loginAtc">Login</a>
                                 </div>
 
                             </div>
